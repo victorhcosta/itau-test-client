@@ -1,0 +1,17 @@
+{
+	"editor.formatOnSave": false,
+	"[javascript]": {
+		"editor.formatOnSave": false
+	},
+	"[typescript]": {
+		"editor.formatOnSave": false
+	},
+	"stylelint.snippet": [
+		"css",
+		"scss"
+	],
+	"stylelint.packageManager": "yarn",
+	"eslint.packageManager": "yarn",
+	"typescript.preferences.importModuleSpecifier": "relative",
+	"files.eol": "\n"
+}

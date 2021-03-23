@@ -1,0 +1,65 @@
+<main class="form">
+	<header class="form__header">
+		<h1>
+			Informe seus dados para poder se cadastrar
+		</h1>
+	</header>
+
+	<form
+		id="form"
+		class="form__body"
+		(ngSubmit)="submit()"
+		[formGroup]="registerForm"
+	>
+		<mat-form-field appearance="outline">
+			<mat-label>Nome</mat-label>
+			<input
+				matInput
+				formControlName="name"
+				placeholder="Placeholder"
+				autocomplete="off"
+			/>
+		</mat-form-field>
+
+		<mat-form-field appearance="outline">
+			<mat-label>Sobrenome</mat-label>
+			<input
+				matInput
+				formControlName="surname"
+				placeholder="Placeholder"
+				autocomplete="off"
+			/>
+		</mat-form-field>
+
+		<mat-form-field appearance="outline">
+			<mat-label>Login</mat-label>
+			<input
+				matInput
+				formControlName="nickname"
+				placeholder="Placeholder"
+				autocomplete="off"
+			/>
+		</mat-form-field>
+
+		<mat-form-field appearance="outline">
+			<mat-label>Senha</mat-label>
+			<input
+				matInput
+				formControlName="password"
+				type="password"
+				placeholder="Placeholder"
+			/>
+		</mat-form-field>
+	</form>
+
+	<footer class="form__footer">
+		<button mat-raised-button form="form" type="submit">
+			Cadastrar-se
+		</button>
+
+		<a mat-raised-button [routerLink]="['/']">
+			Voltar
+		</a>
+
+	</footer>
+</main>

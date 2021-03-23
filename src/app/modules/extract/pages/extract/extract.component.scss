@@ -1,0 +1,101 @@
+@import '~@angular/material/theming';
+@import '~src/assets/styles/variables.scss';
+
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 1.3rem;
+}
+
+.header {
+	display: grid;
+	grid-template-areas: 'wellcome' 'buttons';
+	align-items: center;
+	text-align: center;
+	color: $light-color;
+	background-color: map-get($mat-yellow, 900);
+	padding: 1rem 0rem;
+
+	.header__title {
+		grid-area: wellcome;
+		text-align: center;
+	}
+
+	.header__buttons {
+		grid-area: buttons;
+		display: flex;
+		justify-content: center;
+		gap: 2rem;
+		padding: 0px 2rem;
+	}
+}
+
+.balance {
+	text-align: center;
+
+	.balance__total {
+		font-size: 1.7rem;
+	}
+}
+
+.operation {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
+	gap: 0.7rem;
+
+	.operation__inputs,
+	.operation_buttons {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 1.5rem;
+	}
+
+	.operation_buttons {
+		flex-direction: column;
+		align-items: center;
+
+		.mat-raised-button {
+			width: 80%;
+		}
+	}
+}
+
+.extract {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	.extract__table,
+	.extract__paginator {
+		width: 90%;
+	}
+}
+
+@media (min-width: $breakpoint-md) {
+	.header {
+		.header__buttons {
+			justify-content: end;
+		}
+	}
+
+	.operation {
+
+		.operation_buttons {
+			flex-direction: row;
+
+			.mat-raised-button {
+				width: auto;
+			}
+		}
+	}
+
+	.extract {
+		.extract__table,
+		.extract__paginator {
+			width: 60%;
+		}
+	}
+}

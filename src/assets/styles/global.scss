@@ -1,0 +1,25 @@
+@import './variables.scss';
+
+html, body {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	font-size: $theme-font-size;
+}
+
+body {
+	font-family: $theme-font-family;
+	color: $dark-color;
+	background-color: $light-color;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

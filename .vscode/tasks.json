@@ -1,0 +1,14 @@
+{
+    "command": "'C:\\Program Files\\Firefox Developer Edition\\firefox.exe' -start-debugger-server",
+    "tasks": [
+        {
+            "label": "Prepare firefox to debug",
+            "type": "shell",
+            "command": "'C:\\Program Files\\Firefox Developer Edition\\firefox.exe' -start-debugger-server",
+            "problemMatcher": [],
+            "runOptions": {
+                "runOn": "default"
+            }
+        }
+    ]
+}

@@ -1,0 +1,44 @@
+@import '~@angular/material/theming';
+@import '~src/assets/styles/variables.scss';
+
+.form, .form__body, .form__footer {
+	display: flex;
+	width: 100%;
+}
+
+.form, .form__body {
+	flex-direction: column;
+}
+
+.form {
+	height: 100%;
+}
+
+.form__header {
+	text-align: center;
+	margin-top: 3rem;
+}
+
+.form__body {
+	align-items: center;
+	flex-grow: 0.1;
+
+	.mat-form-field {
+		width: 80%;
+	}
+}
+
+.form__footer {
+	margin-top: 3rem;
+	justify-content: space-evenly;
+}
+
+@media (min-width: $breakpoint-md) {
+	.form {
+		align-items: center;
+	}
+
+	.form__header, .form__body, .form__footer {
+		width: 30%;
+	}
+}

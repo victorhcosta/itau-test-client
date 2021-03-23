@@ -1,0 +1,110 @@
+{
+	"root": true,
+	"ignorePatterns": [
+		"projects/**/*"
+	],
+	"overrides": [
+		{
+			"files": [
+				"*.ts"
+			],
+			"parserOptions": {
+				"project": [
+					"tsconfig.json"
+				],
+				"createDefaultProgram": true
+			},
+			"extends": [
+				"plugin:@angular-eslint/ng-cli-compat",
+				"plugin:@angular-eslint/ng-cli-compat--formatting-add-on",
+				"plugin:@angular-eslint/template/process-inline-templates"
+			],
+			"rules": {
+				"no-underscore-dangle": "off",
+				"@angular-eslint/component-selector": [
+					"error",
+					{
+						"type": "element",
+						"prefix": "app",
+						"style": "kebab-case"
+					}
+				],
+				"@angular-eslint/directive-selector": [
+					"error",
+					{
+						"type": "attribute",
+						"prefix": "app",
+						"style": "camelCase"
+					}
+				]
+			}
+		},
+		{
+			"files": [
+				"*.html"
+			],
+			"extends": [
+				"plugin:@angular-eslint/template/recommended"
+			],
+			"rules": {}
+		}
+	],
+	"env": {
+		"browser": true,
+		"jest": true,
+		"serviceworker": true,
+		"worker": true,
+		"node": true,
+		"es2020": true
+	},
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 12,
+		"sourceType": "module",
+		"extraFileExtensions": [
+			".svg",
+			".css"
+		]
+	},
+	"plugins": [
+		"@typescript-eslint",
+		"eslint-plugin-no-inline-styles",
+		"testing-library",
+		"jest-dom"
+	],
+	"rules": {
+		"arrow-parens": [
+			"error",
+			"as-needed"
+		],
+		"indent": [
+			"warn",
+			"tab"
+		],
+		"no-tabs": [
+			"error",
+			{
+				"allowIndentationTabs": true
+			}
+		],
+		"no-use-before-define": "off",
+		"object-curly-newline": "off",
+		"@typescript-eslint/no-use-before-define": [
+			"error"
+		],
+		"@typescript-eslint/member-ordering": "off",
+		"import/extensions": "off",
+		"import/no-extraneous-dependencies": [
+			"error",
+			{
+				"devDependencies": true
+			}
+		],
+		"import/prefer-default-export": "off",
+		"import/no-default-export": "warn",
+		"import/no-unresolved": "off"
+	}
+}
